@@ -18,7 +18,6 @@ const UPDATE_TODO = gql `
     }
   }`
 
-
 const Todo = (props: Props) => {
   const [ isEditable, toggleIsEditable] = useState(false);
   const [ value, setValue ] = useState(props.todo.title)
@@ -42,7 +41,6 @@ const Todo = (props: Props) => {
     </View>
   )
 }
-
 
 /* ---------------------- STYLE --------------------*/ 
 

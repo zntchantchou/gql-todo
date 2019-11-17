@@ -7,7 +7,7 @@ import TodoList from './TodoList';
 const GET_TODOS = gql `
 {
   todos{
-    title
+    copain
     isCompleted
     id
     tag{

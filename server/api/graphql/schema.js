@@ -21,6 +21,8 @@ type Mutation {
   deleteTodo(id: String!): Todo
 }
 `
-
+// assemblage de tous les types en un seul 'string'
 exports.schema = buildSchema([...TagTypes, ...TodoTypes, queryTypes].join(' '));
+
+// assemblage de tous les resolvers dans un seul objet
 exports.rootQuery = { ...TagQueries, ...TodoQueries };

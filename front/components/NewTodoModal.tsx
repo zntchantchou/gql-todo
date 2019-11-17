@@ -13,13 +13,13 @@ const CREATE_TODO = gql `
 ` 
 function NewTodoModal(props: any) {
   const [value, setValue] = useState('');
-  const [createTodo, {loading, error}] = useMutation(CREATE_TODO, {variables: {"title": value }})
-  
+  const [createTodo, {loading, error}] = useMutation(CREATE_TODO, {variables: {"title": value }, errorPolicy: 'ignore'})
+
     return (
       <View style={{ height: '50%', alignItems: 'center', justifyContent: 'center' }}>
           <Text style={{ fontSize: 30 }}>Nouveau todo : </Text>
           <TextInput 
-          style={{fontSize: 22 }}
+            style={{fontSize: 22 }}
             autoFocus
             placeholder="Aller aux champignons"
             defaultValue=""
